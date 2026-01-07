@@ -445,7 +445,7 @@ section {
 .section-title .subtitle {
   display: block;
   font-size: 0.28125rem; /* 25% of 1.125rem */
-  line-height: 1.2;
+  line-height: 0.5;
   font-weight: 500;
   margin-bottom: var(--spacing-xs);
   text-transform: uppercase;
