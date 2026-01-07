@@ -55,6 +55,16 @@
   background: linear-gradient(135deg, var(--dynamic-primary), var(--dynamic-accent));
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Ensure inline styles work with background-clip */
+.dynamic-gradient[style*="background"] {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
