@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Redirect www to non-www -->
+    <script>
+        (function() {
+            if (window.location.hostname.startsWith('www.')) {
+                window.location.href = 'https://' + window.location.hostname.replace(/^www\./, '') + window.location.pathname + window.location.search + window.location.hash;
+            }
+        })();
+    </script>
+    
     <title>VISUALANTIES - Light Magicians</title>
     <meta name="description" content="VISUALANTIES - Light Magicians from eclectic fields of Art, Science and Technology creating captivating visual experiences.">
     
