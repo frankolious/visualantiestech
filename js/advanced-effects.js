@@ -585,14 +585,12 @@ document.addEventListener('DOMContentLoaded', function() {
             accentHue = hue2 + (hue3 - hue2) * ((scrollProgress - 0.75) * 4);
         }
         
-        // Update CSS variables
+        // Update CSS variables (this will automatically update the gradient text via CSS)
         document.documentElement.style.setProperty('--dynamic-primary', `hsl(${primaryHue}, 70%, 50%)`);
         document.documentElement.style.setProperty('--dynamic-accent', `hsl(${accentHue}, 70%, 50%)`);
         
-        // Apply to gradient elements
-        document.querySelectorAll('.dynamic-gradient').forEach(el => {
-            el.style.background = `linear-gradient(135deg, hsl(${primaryHue}, 70%, 50%), hsl(${accentHue}, 70%, 50%))`;
-        });
+        // Removed inline background styles - CSS handles the gradient text effect
+        // The gradient is applied via CSS background-clip: text, not inline styles
     };
     
     // Update color theme on scroll
