@@ -1,0 +1,318 @@
+/* Additional CSS for advanced visual effects */
+
+/* Glitch Effect */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* WebGL Background */
+.webgl-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Wave Divider */
+.wave-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  transform: translateY(-100%);
+  z-index: 1;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+/* Dynamic Color Theme */
+:root {
+  --dynamic-primary: var(--primary-purple);
+  --dynamic-accent: var(--accent-pink);
+}
+
+.dynamic-gradient {
+  background: linear-gradient(135deg, var(--dynamic-primary), var(--dynamic-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Text Scramble Effect */
+.scramble-char {
+  display: inline-block;
+  color: var(--accent-pink);
+}
+
+/* Enhanced Animations */
+@keyframes float-animation {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.float-animation {
+  animation: float-animation 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(94, 53, 177, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(94, 53, 177, 0.8), 0 0 30px rgba(236, 64, 122, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(94, 53, 177, 0.5);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s infinite;
+}
+
+/* Enhanced Portfolio Hover */
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* 3D Card Effect */
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.card-3d-content {
+  transform: translateZ(50px);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover .card-3d-content {
+  transform: translateZ(80px);
+}
+
+/* Audio Visualizer Enhanced Styles */
+.audio-visualizer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.audio-visualizer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Enhanced Button Styles */
+.btn {
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Magnetic Buttons */
+.btn.magnetic {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Neon Text Effect */
+.neon-text {
+  color: #fff;
+  text-shadow: 
+    0 0 5px var(--primary-purple),
+    0 0 10px var(--primary-purple),
+    0 0 20px var(--primary-purple),
+    0 0 40px var(--accent-pink),
+    0 0 80px var(--accent-pink);
+}
+
+/* Animated Gradient Background */
+.gradient-bg {
+  background: linear-gradient(270deg, var(--primary-purple), var(--accent-pink), var(--gold-orange), var(--accent-teal));
+  background-size: 800% 800%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animated Border */
+.animated-border {
+  position: relative;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink), var(--gold-orange), var(--accent-teal), var(--primary-purple)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: border-animation 4s linear infinite;
+  background-size: 300% 100%;
+}
+
+@keyframes border-animation {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* Reveal Animation */
+.reveal-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-purple);
+  transform: translateX(-100%);
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary-purple), var(--accent-pink));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--accent-pink), var(--gold-orange));
+}
+
+/* Media Queries for Advanced Effects */
+@media screen and (max-width: 768px) {
+  .webgl-bg {
+    opacity: 0.2 !important;
+  }
+  
+  .wave-divider {
+    height: 30px;
+  }
+  
+  .wave-divider svg {
+    height: 30px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px var(--primary-purple),
+      0 0 6px var(--primary-purple),
+      0 0 12px var(--accent-pink);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wave-divider {
+    display: none;
+  }
+  
+  .card-3d:hover {
+    transform: none;
+  }
+  
+  .card-3d:hover .card-3d-content {
+    transform: none;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .webgl-bg,
+  .wave-divider,
+  .animated-bg {
+    display: none !important;
+  }
+}

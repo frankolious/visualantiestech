@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUALANTIES - Light Magicians</title>
+    <meta name="description" content="VISUALANTIES - Light Magicians from eclectic fields of Art, Science and Technology creating captivating visual experiences.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Three.js for WebGL effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP for advanced animations (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/advanced-effects.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Global Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/logo-placeholder.png" alt="VISUALANTIES Logo">
+                </a>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 class="neon-text">Light Magicians</h1>
+            <p>Creating beauty, revealing color, and invoking emotion through innovative LED systems</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn magnetic">Our Services</a>
+                <a href="#contact" class="btn btn-secondary magnetic">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <p>SCROLL DOWN</p>
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="animated-bg gradient-bg"></div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">Who We Are</span>
+                <h2 class="reveal-animation">About Us</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3 class="dynamic-gradient">Light Magicians from Eclectic Fields</h3>
+                    <p>VISUALANTIES is a collective of light magicians from eclectic fields of Art, Science, and Technology who band together to deliver quintessential experiences. Based in Vorarlberg, Austria, we combine cutting-edge technology with artistic creativity to create captivating visual experiences.</p>
+                    
+                    <p>Our mission is to transform spaces and events through innovative LED systems that evoke powerful emotions, inspiring awe, joy, and wonder in everyone who experiences them. We believe in the transformative power of beauty and emotion, and we're committed to using our creativity to make a positive impact.</p>
+                    
+                    <div class="about-values">
+                        <div class="value-item animate-on-scroll delay-100 card-3d">
+                            <div class="value-icon pulse-glow">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="value-text card-3d-content">
+                                <h4>Innovation</h4>
+                                <p>Pushing boundaries with creative solutions and cutting-edge technology</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item animate-on-scroll delay-200 card-3d">
+                            <div class="value-icon pulse-glow">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="value-text card-3d-content">
+                                <h4>Quality</h4>
+                                <p>Delivering exceptional experiences that exceed expectations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item animate-on-scroll delay-300 card-3d">
+                            <div class="value-icon pulse-glow">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="value-text card-3d-content">
+                                <h4>Passion</h4>
+                                <p>Driven by our love for creating beauty and evoking emotion</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item animate-on-scroll delay-400 card-3d">
+                            <div class="value-icon pulse-glow">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="value-text card-3d-content">
+                                <h4>Sustainability</h4>
+                                <p>Creating energy-conscious, modular, and reusable products</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="pages/about.html" class="btn animate-on-scroll delay-500 animated-border">Learn More</a>
+                </div>
+                
+                <div class="about-image animate-on-scroll float-animation">
+                    <img src="images/about-placeholder.jpg" alt="VISUALANTIES Team">
+                </div>
+            </div>
+            
+            <!-- Stats Counter Section -->
+            <div class="stats-counter">
+                <div class="stats-grid">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-icon pulse-glow">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter-value" data-target="150">0</span>+
+                        </div>
+                        <div class="stat-title">Projects Completed</div>
+                    </div>
+                    
+                    <div class="stat-item animate-on-scroll delay-100">
+                        <div class="stat-icon pulse-glow">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter-value" data-target="50">0</span>+
+                        </div>
+                        <div class="stat-title">Happy Clients</div>
+                    </div>
+                    
+                    <div class="stat-item animate-on-scroll delay-200">
+                        <div class="stat-icon pulse-glow">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter-value" data-target="12">0</span>
+                        </div>
+                        <div class="stat-title">Awards Won</div>
+                    </div>
+                    
+                    <div class="stat-item animate-on-scroll delay-300">
+                        <div class="stat-icon pulse-glow">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter-value" data-target="8">0</span>
+                        </div>
+                        <div class="stat-title">Countries Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="animated-bg"></div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">What We Do</span>
+                <h2 class="reveal-animation">Our Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card animate-on-scroll card-3d">
+                    <div class="service-image">
+                        <img src="images/service1-placeholder.jpg" alt="LED Stage Design">
+                    </div>
+                    <div class="service-content card-3d-content">
+                        <div class="service-icon pulse-glow">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3 class="dynamic-gradient">LED Stage Design</h3>
+                        <p>Custom LED stage designs that transform performances and events with stunning visual effects. We provide turn-key experience design support from conception and brand intention to stage design and performance teams.</p>
+                        <a href="#" class="btn btn-secondary magnetic">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card animate-on-scroll delay-100 card-3d">
+                    <div class="service-image">
+                        <img src="images/service2-placeholder.jpg" alt="Audio Reactive Installations">
+                    </div>
+                    <div class="service-content card-3d-content">
+                        <div class="service-icon pulse-glow">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="dynamic-gradient">Audio Reactive Installations</h3>
+                        <p>Real-time audio reactive installations that create moments of synesthesia, with LEDs pulsing to the beat and synchronized sensory experiences that engage multiple senses simultaneously.</p>
+                        <a href="#" class="btn btn-secondary magnetic">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card animate-on-scroll delay-200 card-3d">
+                    <div class="service-image">
+                        <img src="images/service3-placeholder.jpg" alt="Interactive Installations">
+                    </div>
+                    <div class="service-content card-3d-content">
+                        <div class="service-icon pulse-glow">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <h3 class="dynamic-gradient">Interactive Installations</h3>
+                        <p>MQTT IOT distributed sensors and actuators that drive events, allowing moments of play for adults and children alike. Buttons, sliders, and touch screens can affect lights and projection mapping effects.</p>
+                        <a href="#" class="btn btn-secondary magnetic">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card animate-on-scroll delay-300 card-3d">
+                    <div class="service-image">
+                        <img src="images/service4-placeholder.jpg" alt="Performing Art Services">
+                    </div>
+                    <div class="service-content card-3d-content">
+                        <div class="service-icon pulse-glow">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="dynamic-gradient">Performing Art Services</h3>
+                        <p>Professional fire shows, choreographed light shows, children's circus activities, and DJ services that create unforgettable experiences for audiences of all ages.</p>
+                        <a href="#" class="btn btn-secondary magnetic">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audio Reactive Demo -->
+            <div class="audio-reactive-demo animate-on-scroll">
+                <h3 class="text-center neon-text">Experience Audio Reactive LED</h3>
+                <p class="text-center">Click play and speak into your microphone to see how our LED systems react to sound</p>
+                
+                <div class="audio-controls">
+                    <button class="audio-btn pulse-glow">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                
+                <div class="audio-visualizer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="animated-bg gradient-bg"></div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">What We Create</span>
+                <h2 class="reveal-animation">Our Products</h2>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card animate-on-scroll card-3d">
+                    <div class="product-image">
+                        <img src="images/product1-placeholder.jpg" alt="LED Controllers">
+                    </div>
+                    <div class="product-content card-3d-content">
+                        <h3 class="dynamic-gradient">Custom LED Controllers</h3>
+                        <p>Custom sound-reactive WIFI/ETH pixel controllers for LED systems, designed for professional installations and performances.</p>
+                        
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sound reactive technology</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>WiFi and Ethernet connectivity</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Custom programming options</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-price neon-text">From €299</div>
+                        
+                        <div class="product-actions">
+                            <a href="#" class="btn magnetic">Details</a>
+                            <a href="#contact" class="btn btn-secondary magnetic">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card animate-on-scroll delay-100 card-3d">
+                    <div class="product-image">
+                        <img src="images/product2-placeholder.jpg" alt="DIY Pixel Kits">
+                    </div>
+                    <div class="product-content card-3d-content">
+                        <h3 class="dynamic-gradient">DIY Pixel Kits</h3>
+                        <p>DIY pixel kit costumes and LED wearables that allow individuals to create their own light-up fashion and accessories.</p>
+                        
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Easy to assemble</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Programmable patterns</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Rechargeable battery included</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-price neon-text">From €149</div>
+                        
+                        <div class="product-actions">
+                            <a href="#" class="btn magnetic">Details</a>
+                            <a href="#contact" class="btn btn-secondary magnetic">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card animate-on-scroll delay-200 card-3d">
+                    <div class="product-image">
+                        <img src="images/product3-placeholder.jpg" alt="LED Cubes">
+                    </div>
+                    <div class="product-content card-3d-content">
+                        <h3 class="dynamic-gradient">LED Cubes</h3>
+                        <p>Infinity cubes, matrix cubes, and Banksy cubes that serve as stunning decorative elements and light installations for events and spaces.</p>
+                        
+                        <div class="product-features">
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multiple design options</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Customizable patterns</span>
+                            </div>
+                            <div class="product-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Remote control included</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-price neon-text">From €399</div>
+                        
+                        <div class="product-actions">
+                            <a href="#" class="btn magnetic">Details</a>
+                            <a href="#contact" class="btn btn-secondary magnetic">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3D Product Viewer -->
+            <div class="product-3d-container animate-on-scroll">
+                <h3 class="text-center neon-text">Interactive 3D Product View</h3>
+                <div class="product-3d">
+                    <img src="images/product3d-1-placeholder.jpg" alt="Product Front">
+                    <img src="images/product3d-2-placeholder.jpg" alt="Product Side" style="transform: rotateY(90deg)">
+                    <img src="images/product3d-3-placeholder.jpg" alt="Product Back" style="transform: rotateY(180deg)">
+                    <img src="images/product3d-4-placeholder.jpg" alt="Product Other Side" style="transform: rotateY(270deg)">
+                </div>
+                <div class="product-3d-controls">
+                    <button data-direction="left" class="pulse-glow"><i class="fas fa-arrow-left"></i></button>
+                    <button data-direction="right" class="pulse-glow"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <p class="text-center">Drag to rotate the product</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="animated-bg"></div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">Our Work</span>
+                <h2 class="reveal-animation">Portfolio</h2>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="portfolio-filter-btn active" data-filter="all">All</button>
+                <button class="portfolio-filter-btn" data-filter="stage">Stage Design</button>
+                <button class="portfolio-filter-btn" data-filter="installation">Installations</button>
+                <button class="portfolio-filter-btn" data-filter="performance">Performances</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item stage animate-on-scroll">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio1-placeholder.jpg" alt="Stage Design Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Festival Stage Design</h3>
+                        <p>Custom LED stage design for a music festival</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item installation animate-on-scroll delay-100">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio2-placeholder.jpg" alt="Installation Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Interactive Light Installation</h3>
+                        <p>Public space interactive light installation</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item performance animate-on-scroll delay-200">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio3-placeholder.jpg" alt="Performance Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Fire & Light Show</h3>
+                        <p>Combined fire and LED light performance</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item stage animate-on-scroll delay-300">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio4-placeholder.jpg" alt="Stage Design Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Corporate Event Lighting</h3>
+                        <p>Custom lighting design for corporate event</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item installation animate-on-scroll delay-400">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio5-placeholder.jpg" alt="Installation Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Architectural Lighting</h3>
+                        <p>Permanent LED installation for building facade</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item performance animate-on-scroll delay-500">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio6-placeholder.jpg" alt="Performance Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Children's Circus</h3>
+                        <p>Interactive light show for children's event</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-center mt-5 mb-4 neon-text">Horizontal Scroll Gallery</h3>
+            <div class="portfolio-horizontal">
+                <!-- Horizontal Portfolio Items (duplicates for demo) -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio1-placeholder.jpg" alt="Stage Design Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Festival Stage Design</h3>
+                        <p>Custom LED stage design for a music festival</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio2-placeholder.jpg" alt="Installation Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Interactive Light Installation</h3>
+                        <p>Public space interactive light installation</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio3-placeholder.jpg" alt="Performance Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Fire & Light Show</h3>
+                        <p>Combined fire and LED light performance</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio4-placeholder.jpg" alt="Stage Design Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Corporate Event Lighting</h3>
+                        <p>Custom lighting design for corporate event</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio5-placeholder.jpg" alt="Installation Project">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="neon-text">Architectural Lighting</h3>
+                        <p>Permanent LED installation for building facade</p>
+                        <a href="#" class="btn magnetic">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Before/After Slider -->
+            <h3 class="text-center mt-5 mb-4 neon-text">Before & After Transformation</h3>
+            <div class="before-after-container animate-on-scroll">
+                <div class="before-after-slider">
+                    <img src="images/before-placeholder.jpg" alt="Before" class="before-image">
+                    <div class="slider-handle pulse-glow">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <span class="before-label">Before</span>
+                </div>
+                <img src="images/after-placeholder.jpg" alt="After" class="after-image">
+                <span class="after-label">After</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="animated-bg gradient-bg"></div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">What Clients Say</span>
+                <h2 class="reveal-animation">Testimonials</h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-item animate-on-scroll card-3d">
+                    <div class="testimonial-text card-3d-content">
+                        <p>VISUALANTIES transformed our corporate event into an unforgettable experience. The custom LED installation perfectly captured our brand essence and created a magical atmosphere that our guests are still talking about months later.</p>
+                    </div>
+                    
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar pulse-glow">
+                            <img src="images/testimonial1-placeholder.jpg" alt="Client">
+                        </div>
+                        <div class="testimonial-name dynamic-gradient">Sarah Johnson</div>
+                        <div class="testimonial-position">Event Director, TechCorp</div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="animated-bg"></div>
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle dynamic-gradient">Get In Touch</span>
+                <h2 class="reveal-animation">Contact Us</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon pulse-glow">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details card-3d-content">
+                            <h3 class="dynamic-gradient">Our Location</h3>
+                            <p>Twischenwasser, Dafins, Voralberg, Austria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon pulse-glow">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details card-3d-content">
+                            <h3 class="dynamic-gradient">Email Us</h3>
+                            <p>FireDesireSA@gmail.com</p>
+                            <p>frankolious@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon pulse-glow">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details card-3d-content">
+                            <h3 class="dynamic-gradient">Call Us</h3>
+                            <p>+43 660 8511 470 (Frank Harris)</p>
+                            <p>+43 660 7359 870 (Bruno Kopf)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon pulse-glow">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details card-3d-content">
+                            <h3 class="dynamic-gradient">Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Weekend: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate-on-scroll animated-border">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder=" " required>
+                            <label for="email" class="form-label">Your Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder=" " required>
+                            <label for="subject" class="form-label">Subject</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" id="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Message</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn magnetic pulse-glow">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container animate-on-scroll">
+                <!-- Placeholder for map - would be replaced with actual map in production -->
+                <img src="images/map-placeholder.jpg" alt="Map" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo-placeholder.png" alt="VISUALANTIES Logo" class="pulse-glow">
+                    </div>
+                    <p>Light Magicians from eclectic fields of Art, Science and Technology band together as a collective; Visualanties - those of which have a vigilant sense of how to deliver the quintessential experience.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="dynamic-gradient">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="dynamic-gradient">Our Services</h3>
+                    <ul>
+                        <li><a href="#">LED Stage Design</a></li>
+                        <li><a href="#">Audio Reactive Installations</a></li>
+                        <li><a href="#">Interactive Installations</a></li>
+                        <li><a href="#">LED Decor and Lighting Rental</a></li>
+                        <li><a href="#">Custom Projection Mapping</a></li>
+                        <li><a href="#">Performing Art Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="dynamic-gradient">Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates on our latest projects and offerings.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email">
+                        <button type="submit" class="newsletter-btn pulse-glow"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Visual Luminaries GmbH. All Rights Reserved. <a href="pages/impressum.html">Impressum</a> | <a href="pages/terms.html">Terms</a> | <a href="pages/privacy.html">Privacy</a> | <a href="pages/cookies.html">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top pulse-glow"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/advanced-effects.js"></script>
+    <script src="js/webgl-effects.js"></script>
+</body>
+</html>
