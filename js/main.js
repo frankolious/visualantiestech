@@ -387,16 +387,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form validation
-    const contactForm = document.querySelector('.contact-form form');
+    // Form validation and submission
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             let isValid = true;
             const formElements = this.elements;
             
+            // Clear previous status
+            if (formStatus) {
+                formStatus.textContent = '';
+                formStatus.className = 'form-status';
+            }
+            
+            // Validate required fields
             for (let i = 0; i < formElements.length; i++) {
                 if (formElements[i].type !== 'submit' && formElements[i].hasAttribute('required')) {
                     if (!formElements[i].value.trim()) {
@@ -408,12 +417,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
-            if (isValid) {
-                // In a real implementation, you would send the form data to a server
-                alert('Form submitted successfully! In a real implementation, this would be sent to a server.');
-                this.reset();
-            } else {
-                alert('Please fill in all required fields.');
+            if (!isValid) {
+                if (formStatus) {
+                    formStatus.textContent = 'Please fill in all required fields.';
+                    formStatus.className = 'form-status error';
+                }
+                return;
+            }
+            
+            // Disable submit button and show loading
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+            
+            try {
+                // Formspree expects FormData format
+                const formData = new FormData(this);
+                
+                // Skip if Formspree endpoint is not configured
+                if (!this.action || this.action.includes('YOUR_FORM_ID')) {
+                    throw new Error('Formspree endpoint not configured. Please set up your Formspree form ID.');
+                }
+                
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    if (formStatus) {
+                        formStatus.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+                        formStatus.className = 'form-status success';
+                    }
+                    this.reset();
+                } else {
+                    const data = await response.json();
+                    if (data.error) {
+                        throw new Error(data.error);
+                    } else {
+                        throw new Error('Something went wrong. Please try again.');
+                    }
+                }
+            } catch (error) {
+                if (formStatus) {
+                    formStatus.textContent = error.message || 'Failed to send message. Please try again or contact us directly.';
+                    formStatus.className = 'form-status error';
+                }
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
             }
         });
     }
